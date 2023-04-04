@@ -28,7 +28,8 @@ const TrackCard = ({ track }) => {
 
   const navigate = useNavigate();
 
-  const [incrementTrackViews, { loading, error, data }] = useMutation(
+  const [incrementTrackViews] = useMutation(
+  // const [incrementTrackViews, { loading, error, data }] = useMutation(
     INCREMENT_VIEW,
     {
       variables: { incrementTrackViewsId: trackId },
@@ -36,9 +37,9 @@ const TrackCard = ({ track }) => {
     }
   );
 
-  console.log('loading', loading);
-  console.log('error', error);
-  console.log('data', data);
+  // console.log('loading', loading);
+  // console.log('error', error);
+  // console.log('data', data);
 
   return (
     <CardContainer

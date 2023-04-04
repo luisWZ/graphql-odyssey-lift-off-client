@@ -29,7 +29,6 @@ const GET_TRACK = gql`
 
 export const Track = () => {
   const { trackId } = useParams();
-  console.log('trackId', trackId);
   const { error, loading, data } = useQuery(GET_TRACK, {
     variables: { trackId },
   });
